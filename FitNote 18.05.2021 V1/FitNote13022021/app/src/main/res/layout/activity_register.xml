@@ -1,0 +1,197 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@color/white"
+    android:orientation="vertical"
+    tools:context=".RegisterActivity">
+
+    <TextView
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="Profile pic:"
+        android:layout_marginTop="10sp"/>
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="10sp">
+
+        <ImageView
+            android:id="@+id/imgProfilePic"
+            android:layout_width="65dp"
+            android:layout_height="65dp"
+            android:src="@drawable/default_user"
+            ></ImageView>
+
+        <ImageView
+            android:id="@+id/imgCemraButton"
+            android:layout_width="35dp"
+            android:layout_height="35dp"
+            android:layout_gravity="bottom"
+            android:layout_marginLeft="30dp"
+            android:src="@drawable/cemra"></ImageView>
+
+
+        >
+    </LinearLayout>
+
+
+    <EditText
+        android:id="@+id/etUserName"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:hint="Username"
+        android:inputType="textPersonName"></EditText>
+
+    <EditText
+        android:id="@+id/etPassword"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:hint="Password"
+        android:inputType="textPassword"></EditText>
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:weightSum="2">
+
+        <TextView
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:layout_weight="1"
+            android:text="Weight (kilograms):" />
+
+        <TextView
+            android:id="@+id/txtSeekBarWeight"
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:layout_weight="1"
+            android:text="40" />
+
+        >
+    </LinearLayout>
+
+    <SeekBar
+        android:id="@+id/seekBarWeight"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:max="200"
+        android:min="40"
+        android:layout_marginTop="15dp"/>
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:weightSum="2">
+
+        <TextView
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+
+            android:layout_weight="1"
+            android:text="Height (centimeters):" />
+
+        <TextView
+            android:id="@+id/txtSeekBarHeight"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_weight="1"
+            android:text="50" />
+
+        >
+    </LinearLayout>
+
+    <SeekBar
+        android:id="@+id/seekBarHeight"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:max="250"
+        android:min="50"
+        android:layout_marginTop="15dp"/>
+
+    <TextView
+        android:id="@+id/tv_date"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="Select BirthDate:"
+        android:textSize="20sp"></TextView>
+
+    <Button
+        android:id="@+id/btDatePickerButton"
+        style="?android:spinnerStyle"
+        android:layout_width="250dp"
+        android:layout_height="wrap_content"
+        android:layout_gravity="center"
+        android:onClick="openDatePicker"
+        android:text="JAN 01 2020"
+        android:textColor="#000000"
+        android:textSize="30sp"></Button>
+
+    <TextView
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="Chose Gender:"
+        android:textSize="10sp"></TextView>
+
+    <RadioGroup
+        android:id="@+id/radioGroup"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content">
+
+        <RadioButton
+            android:id="@+id/radio_male"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:checked="true"
+            android:text="Male" />
+
+        <RadioButton
+            android:id="@+id/radio_female"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="Female" />
+
+        <RadioButton
+            android:id="@+id/radio_other"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="Other" />
+
+
+        >
+    </RadioGroup>
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:weightSum="2">
+
+        <Button
+            android:id="@+id/btFinishReg"
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="5dp"
+            android:layout_weight="1"
+            android:enabled="false"
+            android:text="Finish"
+            android:textAllCaps="false"
+            android:textColor="@color/black"
+            android:backgroundTint="#4CAF50"/>
+
+        <Button
+            android:id="@+id/btCancel"
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="5dp"
+            android:layout_weight="1"
+            android:text="Cancel"
+            android:textAllCaps="false"
+            android:backgroundTint="#FF7700"/>
+
+        >
+    </LinearLayout>
+
+</LinearLayout>

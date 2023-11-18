@@ -1,0 +1,140 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context=".FeedbackActivity"
+    android:orientation="vertical">
+
+    <TextView
+        android:id="@+id/txtFirstSentence"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="How much did you do?"
+        android:layout_marginTop="50dp"
+        android:textSize="18sp"
+        android:textStyle="bold"
+        ></TextView>
+
+    <TextView
+        android:id="@+id/txtTestInput"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        ></TextView>
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:orientation="horizontal"
+        android:layout_marginTop="35dp"
+        android:weightSum="4"
+        >
+
+        <TextView
+            android:layout_width="0dp"
+            android:layout_height="40sp"
+            android:text="Please enter here:"
+            android:textSize="15sp"
+            android:layout_weight="1.5"
+            ></TextView>
+
+
+        <NumberPicker
+            android:id="@+id/numberPicker"
+            android:layout_width="0dp"
+            android:layout_height="50dp"
+            android:layout_weight="1"
+            ></NumberPicker>
+
+    </LinearLayout>
+
+
+    <TextView
+        android:id="@+id/txtSecondSentence"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="Rate the difficulty:"
+        android:layout_marginTop="35dp"
+        android:textSize="18sp"
+        android:textStyle="bold"
+        ></TextView>
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:orientation="horizontal"
+        android:layout_marginTop="35dp"
+        android:weightSum="8"
+        >
+
+        <ImageView
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:layout_weight="1"
+            android:src="@drawable/hard_text"></ImageView>
+
+        <RadioGroup
+            android:id="@+id/radioGroup"
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:layout_weight="6"
+            android:orientation="horizontal">
+
+            <RadioButton
+                android:id="@+id/radio_1"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:checked="true"
+                android:text="1" />
+
+            <RadioButton
+                android:id="@+id/radio_2"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="2" />
+
+            <RadioButton
+                android:id="@+id/radio_3"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="3" />
+
+            <RadioButton
+                android:id="@+id/radio_4"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="4" />
+
+            <RadioButton
+                android:id="@+id/radio_5"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="5" />
+
+
+            >
+        </RadioGroup>
+
+        <ImageView
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:layout_weight="1"
+            android:src="@drawable/easy_text"></ImageView>
+
+    </LinearLayout>
+
+    <Button
+        android:id="@+id/btnFinish"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="140dp"
+        android:layout_gravity="center"
+        android:textSize="30sp"
+        android:text="Finish"
+        android:textAllCaps="false"
+        android:backgroundTint="#FF9800"></Button>
+
+
+
+</LinearLayout>

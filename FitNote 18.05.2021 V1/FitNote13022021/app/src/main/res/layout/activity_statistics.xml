@@ -1,0 +1,165 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context=".StatisticsActivity"
+    android:orientation="vertical"
+    android:layout_margin="10dp"
+    android:backgroundTint="@color/colorPrimary">
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:weightSum="2"
+        android:layout_marginBottom="10dp"
+        android:orientation="horizontal">
+
+        <de.hdodenhof.circleimageview.CircleImageView
+            android:id="@+id/imgUserPicture"
+            android:layout_width="70dp"
+            android:layout_height="70dp"
+            android:layout_weight="1"
+            android:src="@drawable/default_user"
+            app:civ_border_width="3dp"
+            app:civ_border_color="@color/black"
+            android:layout_gravity="center"
+            ></de.hdodenhof.circleimageview.CircleImageView>
+
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="GRAPHS"
+            android:layout_gravity="center"
+            android:textSize="30sp"
+            android:textColor="@color/colorPrimary"
+            android:layout_marginTop="20dp"
+            android:layout_weight="1"
+            ></TextView>
+
+    </LinearLayout>
+
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:weightSum="2"
+        android:layout_marginBottom="10dp"
+        android:orientation="horizontal">
+
+        <Spinner
+            android:id="@+id/exercise_spinner"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_weight="1"
+            ></Spinner>
+
+        <Spinner
+            android:id="@+id/year_spinner"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_weight="1"
+            ></Spinner>
+
+    </LinearLayout>
+
+
+    <Button
+        android:id="@+id/btnSubmit"
+        android:layout_width="75dp"
+        android:layout_height="45dp"
+        android:layout_gravity="center"
+        android:backgroundTint="#FF9800"
+        android:text="Submit"
+        android:textAllCaps="false"
+        android:textColor="@color/white"
+        android:textSize="10sp"></Button>
+
+    <com.github.mikephil.charting.charts.BarChart
+        android:layout_width="match_parent"
+        android:layout_height="320dp"
+        android:id="@+id/barChart"
+        ></com.github.mikephil.charting.charts.BarChart>
+
+    <TextView
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="----Bellow is the meaning of the colors - user's rating----"
+        android:textColor="@color/colorPrimary"
+        android:textStyle="bold"
+        android:textSize="10sp"
+        android:layout_gravity="center"
+        android:gravity="center"
+        ></TextView>
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:weightSum="5"
+        android:layout_marginBottom="10dp"
+        android:orientation="horizontal">
+
+        <TextView
+            android:layout_width="50dp"
+            android:layout_height="60dp"
+            android:text="Hard"
+            android:textSize="8sp"
+            android:layout_weight="1"
+            android:textStyle="bold"
+            android:gravity="center"
+            android:background="@android:drawable/editbox_background"
+            android:backgroundTint="@color/Hard"
+            ></TextView>
+
+        <TextView
+            android:layout_width="50dp"
+            android:layout_height="60dp"
+            android:text="Hard-Medium"
+            android:textSize="8sp"
+            android:layout_weight="1"
+            android:textStyle="bold"
+            android:gravity="center"
+            android:background="@android:drawable/editbox_background"
+            android:backgroundTint="@color/HardMedium"
+            ></TextView>
+
+        <TextView
+            android:layout_width="50dp"
+            android:layout_height="60dp"
+            android:text="Medium"
+            android:textSize="8sp"
+            android:layout_weight="1"
+            android:textStyle="bold"
+            android:gravity="center"
+            android:background="@android:drawable/editbox_background"
+            android:backgroundTint="@color/Medium"
+            ></TextView>
+
+        <TextView
+            android:layout_width="50dp"
+            android:layout_height="60dp"
+            android:text="Easy-Medium"
+            android:textSize="8sp"
+            android:layout_weight="1"
+            android:textStyle="bold"
+            android:gravity="center"
+            android:background="@android:drawable/editbox_background"
+            android:backgroundTint="@color/EasyMedium"
+            ></TextView>
+
+        <TextView
+            android:layout_width="50dp"
+            android:layout_height="60dp"
+            android:text="Easy"
+            android:textSize="8sp"
+            android:layout_weight="1"
+            android:textStyle="bold"
+            android:gravity="center"
+            android:background="@android:drawable/editbox_background"
+            android:backgroundTint="@color/Easy"
+            ></TextView>
+
+    </LinearLayout>
+
+</LinearLayout>

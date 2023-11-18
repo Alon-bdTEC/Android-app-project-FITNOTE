@@ -1,0 +1,214 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context=".EditUserActivity"
+    android:orientation="vertical">
+
+    <TextView
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_gravity="center"
+        android:text="Edit User:"
+        android:textSize="35sp"
+        android:textColor="@color/colorPrimary"
+        android:id="@+id/txtTitleEditUser"
+        ></TextView>
+
+    <EditText
+        android:id="@+id/etPasswordEditUser"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:hint="Password"
+        android:inputType="textPassword"></EditText>
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:weightSum="2">
+
+        <TextView
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:layout_weight="1"
+            android:text="Weight (kilograms):" />
+
+        <TextView
+            android:id="@+id/txtSeekBarWeightEditUser"
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:layout_weight="1"
+            android:text="40" />
+
+        >
+    </LinearLayout>
+
+    <SeekBar
+        android:id="@+id/seekBarWeightEditUser"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:max="200"
+        android:min="40"
+        android:layout_marginTop="15dp"/>
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:weightSum="2">
+
+        <TextView
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+
+            android:layout_weight="1"
+            android:text="Height (centimeters):" />
+
+        <TextView
+            android:id="@+id/txtSeekBarHeightEditUser"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_weight="1"
+            android:text="50" />
+
+        >
+    </LinearLayout>
+
+    <SeekBar
+        android:id="@+id/seekBarHeightEditUser"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:max="250"
+        android:min="50"
+        android:layout_marginTop="15dp"/>
+
+    <TextView
+        android:id="@+id/tv_date"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="Select BirthDate:"
+        android:textSize="20sp"></TextView>
+
+    <Button
+        android:id="@+id/btDatePickerButtonEditUser"
+        style="?android:spinnerStyle"
+        android:layout_width="250dp"
+        android:layout_height="wrap_content"
+        android:layout_gravity="center"
+        android:onClick="openDatePicker"
+        android:text="JAN 01 2020"
+        android:textColor="#000000"
+        android:textSize="30sp"></Button>
+
+    <TextView
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="Chose Gender:"
+        android:textSize="14sp"></TextView>
+
+    <RadioGroup
+        android:id="@+id/radioGroupGenderEditUser"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:orientation="horizontal">
+
+        <RadioButton
+            android:id="@+id/radio_maleEditUser"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:checked="true"
+            android:text="Male" />
+
+        <RadioButton
+            android:id="@+id/radio_femaleEditUser"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="Female" />
+
+        <RadioButton
+            android:id="@+id/radio_otherEditUser"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="Other" />
+
+
+        >
+    </RadioGroup>
+
+    <TextView
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="Chose UserLevel:"
+        android:textSize="14sp"></TextView>
+
+    <RadioGroup
+        android:id="@+id/radioGroupUserLevelEditUser"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:orientation="horizontal">
+
+        <RadioButton
+            android:id="@+id/radio_NormalEditUser"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:checked="true"
+            android:text="Normal" />
+
+        <RadioButton
+            android:id="@+id/radio_AdminEditUser"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="Admin" />
+
+        <RadioButton
+            android:id="@+id/radio_Super_AdminEditUser"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="Super Admin" />
+
+
+        >
+    </RadioGroup>
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:weightSum="2">
+
+        <Button
+            android:id="@+id/btUpdateEditUser"
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="5dp"
+            android:layout_weight="1"
+            android:text="Update"
+            android:textAllCaps="false"
+            android:textColor="@color/black"
+            android:backgroundTint="#4CAF50"/>
+
+        <Button
+            android:id="@+id/btCancelEditUser"
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="5dp"
+            android:layout_weight="1"
+            android:text="Cancel"
+            android:textAllCaps="false"
+            android:backgroundTint="#FF7700"/>
+
+        >
+    </LinearLayout>
+
+    <Button
+        android:id="@+id/btDeleteEditUser"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="5dp"
+        android:layout_gravity="center"
+        android:text="Delete"
+        android:textAllCaps="false"
+        android:textColor="#FFFFFF"
+        android:backgroundTint="#F44336"/>
+
+</LinearLayout>

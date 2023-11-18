@@ -1,0 +1,51 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context=".AddExerciseActivity"
+    android:background="@color/white"
+    android:orientation="vertical">
+
+
+    <ImageView
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="20sp"
+        android:src="@drawable/logo"></ImageView>
+
+    <TextView
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:id="@+id/txtMainTitle"
+        android:text="Choose your Exercise:"
+        android:textSize="30dp"
+        android:textColor="@color/black"
+        ></TextView>
+
+    <SearchView
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:id="@+id/searchViewExerciseList"
+        android:iconifiedByDefault="false"
+        android:queryHint="Exercise Name"
+        ></SearchView>
+
+    <ListView
+        android:id="@+id/listViewExercises"
+        android:layout_width="match_parent"
+        android:layout_height="350dp"></ListView>
+
+    <Button
+        android:id="@+id/btCancel"
+        android:layout_width="150dp"
+        android:layout_height="50dp"
+        android:layout_gravity="end"
+        android:layout_marginTop="5dp"
+        android:layout_marginEnd="20dp"
+        android:text="Cancel"
+        android:textAllCaps="false"
+        android:backgroundTint="#FF9800"/>
+
+</LinearLayout>

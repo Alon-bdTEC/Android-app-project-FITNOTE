@@ -1,0 +1,72 @@
+<?xml version="1.0" encoding="utf-8"?>
+<manifest xmlns:android="http://schemas.android.com/apk/res/android"
+    package="com.example.fitnote13022021">
+
+    <uses-permission android:name="android.permission.READ_CONTACTS" />
+
+    <uses-feature
+        android:name="android.hardware.Camera"
+        android:required="true" />
+
+    <application
+        android:allowBackup="true"
+        android:icon="@drawable/logo_only_pic"
+        android:label="@string/app_name"
+        android:roundIcon="@mipmap/ic_launcher_round"
+        android:supportsRtl="true"
+        android:theme="@style/Theme.FitNote13022021">
+        <activity android:name=".EditUserActivity"></activity>
+        <activity android:name=".ManagerUsersActivity" />
+        <activity
+            android:name=".InformationActivity"
+            android:label="@string/title_activity_information"
+            android:theme="@style/Theme.FitNote13022021.NoActionBar" />
+        <activity
+            android:name=".ViewExercisesResultsActivity"
+            android:label="Results" />
+        <activity
+            android:name=".SettingsActivity"
+            android:label="Settings" />
+        <activity
+            android:name=".WhatsAppSendActivity"
+            android:label="Whats App Send" />
+        <activity
+            android:name=".ShareActivity"
+            android:label="Share With Friends" />
+        <activity
+            android:name=".StatisticsActivity"
+            android:label="Statistics" />
+        <activity
+            android:name=".FeedbackActivity"
+            android:label="feedback" />
+        <activity
+            android:name=".ExecuteExerciseActivity"
+            android:label="execute-training" />
+
+        <service android:name=".MusicAndTimerService"
+            android:exported="false"/>
+
+        <activity
+            android:name=".AddExerciseActivity"
+            android:label="AddExercise" />
+        <activity
+            android:name=".ProgramUserActivity"
+            android:label="User-Program" />
+        <activity
+            android:name=".RegisterActivity"
+            android:label="Register" />
+        <activity
+            android:name=".MainScreenActivity"
+            android:label="FitNote">
+            <intent-filter>
+                <action android:name="android.intent.action.MAIN" />
+
+                <category android:name="android.intent.category.LAUNCHER" />
+            </intent-filter>
+        </activity> <!-- Register the Reminder Receiver -->
+        <receiver
+            android:name=".ReminderBroadcast"
+            android:enabled="true" />
+    </application>
+
+</manifest>

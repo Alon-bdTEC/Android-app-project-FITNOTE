@@ -1,0 +1,63 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context=".WhatsAppSendActivity"
+    android:orientation="vertical">
+
+    <TextView
+        android:text="Name: "
+        android:layout_height="wrap_content"
+        android:layout_width="match_parent"
+        android:id="@+id/tvName"
+        android:textColor="@color/colorPrimary"
+        android:textSize="30sp"/>
+
+    <TextView
+        android:text="Phone number: "
+        android:layout_height="wrap_content"
+        android:layout_width="match_parent"
+        android:id="@+id/tvPhone"
+        android:textColor="@color/colorPrimary"
+        android:textSize="30sp"/>
+
+    <EditText
+        android:id="@+id/etWhatsAppMessage"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:hint="Enter Your message here"
+        android:layout_marginTop="35dp"
+        android:inputType="textMultiLine"
+        android:scrollbars="vertical"
+        android:minLines="3"
+        android:maxLines="10"
+        />
+
+    <Button
+        android:id="@+id/btSendWhatsAppMessage"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="5dp"
+        android:layout_gravity="center"
+        android:text="SEND"
+        android:textAllCaps="false"
+        android:textColor="@color/black"
+        android:textStyle="bold"
+        android:backgroundTint="#4CAF50"/>
+
+    <TextView
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="35dp"
+        android:layout_gravity="center"
+        android:text="Your message will be combined with your exercises results from this week"
+        android:textColor="@color/black"
+        android:textStyle="bold"
+        android:gravity="center"
+        ></TextView>
+
+
+
+</LinearLayout>

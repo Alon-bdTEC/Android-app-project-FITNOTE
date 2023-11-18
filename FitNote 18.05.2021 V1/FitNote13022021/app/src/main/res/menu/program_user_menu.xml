@@ -1,0 +1,37 @@
+<?xml version="1.0" encoding="utf-8"?>
+<menu xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto">
+
+    <item
+        android:title="graphs"
+        android:id="@+id/graphsItem"
+        android:icon="@drawable/ic_baseline_show_chart"
+        app:showAsAction="always"
+        android:iconTint="@color/black"
+        ></item>
+
+    <item
+        android:title="results"
+        android:id="@+id/exercisesResultsItem"
+        android:icon="@drawable/ic_results"
+        app:showAsAction="always"
+        android:iconTint="@color/black"
+        ></item>
+
+    <item
+        android:title="share"
+        android:id="@+id/shareItem"
+        android:icon="@drawable/ic_share"
+        app:showAsAction="always"
+        android:iconTint="@color/black"
+        ></item>
+
+    <item
+        android:title="settings"
+        android:id="@+id/settingsItem"
+        android:icon="@drawable/ic_settings"
+        android:iconTint="@color/black"
+        app:showAsAction="always"
+        ></item>
+
+</menu>

@@ -1,0 +1,41 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context=".ShareActivity"
+    android:orientation="vertical"
+    android:text="shareWithContact">
+
+    <TextView
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:id="@+id/txtShareWithContactScreen"
+        android:layout_marginTop="35dp"
+        android:text="Choose contact to send message to"
+        android:gravity="center"
+        android:layout_gravity="center"
+        android:textSize="20sp"
+        android:textColor="#FF8C00"
+        android:textStyle="bold"
+        ></TextView>
+
+    <SearchView
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:id="@+id/searchViewContactList"
+        android:iconifiedByDefault="false"
+        android:queryHint="Contact Name"
+        ></SearchView>
+
+    <androidx.recyclerview.widget.RecyclerView
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:id="@+id/recyclerViewContacts"
+        tools:listitem="@layout/item_contact"
+        android:layout_marginBottom="35dp"
+        ></androidx.recyclerview.widget.RecyclerView>
+
+
+</LinearLayout>

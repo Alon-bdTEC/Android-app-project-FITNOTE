@@ -1,0 +1,162 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@color/white"
+    android:orientation="vertical"
+    tools:context=".ProgramUserActivity">
+
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:weightSum="3"
+        android:orientation="horizontal"
+        android:layout_marginTop="35dp"
+        >
+
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:id="@+id/txtMainTitle"
+            android:text="Welcome"
+            android:textSize="30dp"
+            android:textColor="@color/black"
+            android:layout_weight="1"
+            ></TextView>
+
+        <de.hdodenhof.circleimageview.CircleImageView
+            android:id="@+id/imgProgramUserPic"
+            android:layout_width="70dp"
+            android:layout_height="70dp"
+            android:layout_weight="2"
+            android:src="@drawable/default_user"
+            app:civ_border_width="3dp"
+            app:civ_border_color="@color/black"
+            ></de.hdodenhof.circleimageview.CircleImageView>
+
+    </LinearLayout>
+
+    <SearchView
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:id="@+id/searchViewUserExerciseList"
+        android:iconifiedByDefault="false"
+        android:queryHint="Exercise Name"
+        ></SearchView>
+
+    <LinearLayout
+        android:id="@+id/layoutOfListView"
+        android:layout_width="wrap_content"
+        android:layout_height="310dp"
+        android:orientation="vertical"
+        android:weightSum="3"
+        >
+
+        <ListView
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:id="@+id/listViewUserExercises"
+            android:layout_weight="2"
+            ></ListView>
+
+        <TextView
+            android:id="@+id/txtEmptyListMessage"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="Its seems you don't have any exercises to do. you can add an exercise with the plus button :D"
+            android:textSize="20sp"
+            android:layout_weight="1"
+            android:visibility="gone"
+            ></TextView>
+
+    </LinearLayout>
+
+    <LinearLayout
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        >
+
+    </LinearLayout>
+
+    <de.hdodenhof.circleimageview.CircleImageView
+        android:id="@+id/btnAddExercise"
+        android:layout_width="70dp"
+        android:layout_height="70dp"
+        android:layout_gravity="end"
+        android:layout_marginLeft="150dp"
+        android:src="@drawable/ic_plus"
+        android:text="+"
+        app:civ_border_width="3dp"
+        app:civ_border_color="#00FFFFFF"
+        ></de.hdodenhof.circleimageview.CircleImageView>
+
+    <TextView
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="Select Your Notification:"
+        android:textSize="16sp"
+        android:textColor="@color/colorPrimary"
+        android:textStyle="bold"
+        android:layout_marginTop="20dp"
+        android:layout_gravity="bottom"
+        ></TextView>
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:orientation="horizontal"
+        android:weightSum="6"
+        android:layout_marginTop="10dp"
+        >
+
+        <TextView
+            android:layout_width="80dp"
+            android:layout_height="70dp"
+            android:layout_marginLeft="10dp"
+            android:layout_marginRight="25dp"
+            android:id="@+id/tv_timer"
+            android:textSize="15sp"
+            android:text="0:00"
+            android:layout_weight="1"
+            android:textStyle="bold"
+            android:gravity="center"
+            android:drawableTop="@drawable/ic_timer"
+            android:background="@android:drawable/editbox_background"
+            ></TextView>
+
+        <Button
+            android:id="@+id/btnSetAlarm"
+            android:textSize="10sp"
+            android:layout_width="70dp"
+            android:layout_height="50dp"
+            android:layout_gravity="end"
+            android:layout_marginTop="10dp"
+            android:layout_marginRight="10dp"
+            android:layout_weight="1"
+            android:backgroundTint="#00BCD4"
+            android:textColor="@color/black"
+            android:textStyle="bold"
+            android:text="SET"></Button>
+        <Button
+            android:id="@+id/btnCancelAlarm"
+            android:textSize="10sp"
+            android:layout_width="85dp"
+            android:layout_height="50dp"
+            android:layout_gravity="end"
+            android:layout_marginTop="10dp"
+            android:layout_marginRight="35dp"
+            android:layout_weight="1"
+            android:backgroundTint="#00BCD4"
+            android:textColor="@color/black"
+            android:textStyle="bold"
+            android:text="DELETE"></Button>
+
+
+    </LinearLayout>
+
+
+
+</LinearLayout>
