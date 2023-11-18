@@ -12,13 +12,13 @@ FitShare is an Android application designed to help users track their exercise r
 
 ## Screenshots
 
-![FitShare App Screenshots](screenshots.png)
+![FitShare App Screenshots](image/screenshots.png)
 
 ## Installation
 
 1. **Clone the repository:**
    ```bash
-   git clone https://github.com/username/FitShare.git
+   git clone https://github.com/Alon-bdTEC/Android-app-project-FITNOTE
    ```
 
 2. **Open in Android Studio:**
