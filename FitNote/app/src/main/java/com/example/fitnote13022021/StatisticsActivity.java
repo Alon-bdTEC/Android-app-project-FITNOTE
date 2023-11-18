@@ -195,6 +195,12 @@ public class StatisticsActivity extends AppCompatActivity {
 
         barDataSet = new BarDataSet(barEntries, labelDataSet);
 
+        int wow = barEntries.size();
+
+        for (int i=0; i<wow; i++){
+            Toast.makeText(this, "barEntries " + barEntries.get(i).getX(), Toast.LENGTH_SHORT).show();
+        }
+
         barData = new BarData(barDataSet);
 
         //now we have to set our data in our bar chart
@@ -213,10 +219,12 @@ public class StatisticsActivity extends AppCompatActivity {
         XAxis xAxis = barChart.getXAxis();
 
         //JAN FEB MAR APR MAY JUN JUL AUG SEP OCT NOV DEC
-        String[] moths = new String[] {"JAN", "FEB", "MAR", "APR", "MAY", "JUN", "JUL", "AUG", "SEP", "OCT", "NOV", "DEC"};
+        String[] months = new String[] {"JAN", "FEB", "MAR", "APR", "MAY", "JUN", "JUL", "AUG", "SEP", "OCT", "NOV", "DEC"};
 
-        xAxis.setValueFormatter(new IndexAxisValueFormatter(moths));
+        xAxis.setValueFormatter(new IndexAxisValueFormatter(months));
 
+        xAxis.setTextSize(3f);
+        xAxis.setLabelCount(12);
         xAxis.setCenterAxisLabels(true);
         xAxis.setPosition(XAxis.XAxisPosition.BOTTOM);
         xAxis.setGranularity(1);
@@ -234,13 +242,13 @@ public class StatisticsActivity extends AppCompatActivity {
 
 
         barChart.setDragEnabled(true);
-        barChart.setVisibleXRangeMaximum(3);
+        //barChart.setVisibleXRangeMaximum(20);//maybe 20?
 
         float barSpace = 0.08f;
         float groupSpace = 0.44f;
 
-        barChart.getXAxis().setAxisMinimum(0);
-        barChart.getXAxis().setAxisMaximum(12);
+        xAxis.setAxisMinimum(0f);
+        xAxis.setAxisMaximum(12 + 1f);
         //barChart.getAxisLeft().setAxisMinimum(0);
 
 
@@ -313,7 +321,9 @@ public class StatisticsActivity extends AppCompatActivity {
 
                         Date dateOfExercise = new Date(year, month, day);
 
-                        BarEntry entry = new BarEntry(month, repetition);
+                        Toast.makeText(this, "month " + month + " repetition " + repetition + " yearToCheck " + yearToCheck, Toast.LENGTH_SHORT).show();
+
+                        BarEntry entry = new BarEntry((int)month, repetition);
 
                         //adding a color that represents the difficulty of
                         //doing the exercise

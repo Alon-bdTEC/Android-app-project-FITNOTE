@@ -15,7 +15,8 @@ import java.util.List;
 public class DataBaseHelper extends SQLiteOpenHelper {
 
     //Initialize variables
-    private static final String DATABASE_NAME = "fitnote_database12345678";
+    private Context mContext;
+    private static final String DATABASE_NAME = "fitnote_database1234567";
     private static final int DATABASE_VERSION = 1;
 
     private static final String TABLE_USER = "Users";
@@ -29,6 +30,7 @@ public class DataBaseHelper extends SQLiteOpenHelper {
 
     public DataBaseHelper(@Nullable Context context, @Nullable String name, @Nullable SQLiteDatabase.CursorFactory factory, int version) {
         super(context, name, null, version);
+        mContext = context;
     }
 
     @Override
@@ -50,7 +52,10 @@ public class DataBaseHelper extends SQLiteOpenHelper {
         // Exercise Table;
         //  (exerciseID INT PRIMARY KEY, exerciseName TEXT,
         //  exercisePic INT, exerciseDetail TEXT)
-        db.execSQL("INSERT INTO " + TABLE_EXERCISES + " VALUES (1, 'Push Up', "+R.drawable.pushup+", '1. Get down on all fours, placing your hands slightly wider than your shoulders. " +
+
+        //getDrawableResourceId
+        //"+R.drawable.pushup+"
+        db.execSQL("INSERT INTO " + TABLE_EXERCISES + " VALUES (1, 'Push Up', "+getDrawableResourceId("pushup")+", '1. Get down on all fours, placing your hands slightly wider than your shoulders. " +
                 "\n" +
                 "2. Straighten your arms and legs. " +
                 "\n" +
@@ -60,18 +65,18 @@ public class DataBaseHelper extends SQLiteOpenHelper {
                 "\n" +
                 "5. Repeat.  ')");
 
-        db.execSQL("INSERT INTO " + TABLE_EXERCISES + " VALUES (2, 'Squat', "+R.drawable.squat+", '1. Find a foot stance that feels best for you. Pointing your toes slightly outwards helps some, but keeping them parallel is fine, too. If you’re not sure what’s best, start by putting your feet shoulder-width apart and pointed about 15 degrees outwards. " +
+        db.execSQL("INSERT INTO " + TABLE_EXERCISES + " VALUES (2, 'Squat', "+getDrawableResourceId("squat")+", '1. Find a foot stance that feels best for you. Pointing your toes slightly outwards helps some, but keeping them parallel is fine, too. If you’re not sure what’s best, start by putting your feet shoulder-width apart and pointed about 15 degrees outwards. " +
                 "\n" +
                 "2. Tense your abs like someone is about to punch you. " +
                 "\n" +
                 "3. Look straight ahead and stand tall!')");
 
-        db.execSQL("INSERT INTO " + TABLE_EXERCISES + " VALUES (3, 'Running', "+R.drawable.running+", 'TIPS: When you first start out, try alternating between running and walking during your session. As time goes on, make the running intervals longer until you no longer feel the need to walk. " +
+        db.execSQL("INSERT INTO " + TABLE_EXERCISES + " VALUES (3, 'Running', "+getDrawableResourceId("running")+", 'TIPS: When you first start out, try alternating between running and walking during your session. As time goes on, make the running intervals longer until you no longer feel the need to walk. " +
                 "Give yourself a few minutes to cool down after each run by walking and a doing few stretches. Try our post-run stretch routine.')");
 
-        db.execSQL("INSERT INTO " + TABLE_EXERCISES + " VALUES (4, 'RopeJump', "+R.drawable.ropejump+", 'Get a large rope that you can pass under your feet. Move the rope under your feet while you jump and repeat.')");
+        db.execSQL("INSERT INTO " + TABLE_EXERCISES + " VALUES (4, 'RopeJump', "+getDrawableResourceId("ropejump")+", 'Get a large rope that you can pass under your feet. Move the rope under your feet while you jump and repeat.')");
 
-        db.execSQL("INSERT INTO " + TABLE_EXERCISES + " VALUES (5, 'JumpingJacks', "+R.drawable.jumping_jacks+", 'JumpingJacks: Stand upright with your legs together, arms at your sides. "+
+        db.execSQL("INSERT INTO " + TABLE_EXERCISES + " VALUES (5, 'JumpingJacks', "+getDrawableResourceId("jumping_jacks")+", 'JumpingJacks: Stand upright with your legs together, arms at your sides. "+
                 "\n" +
                 "Bend your knees slightly, and jump into the air. "+
                 "\n" +
@@ -81,7 +86,7 @@ public class DataBaseHelper extends SQLiteOpenHelper {
                 "\n" +
                 "Repeat.')");
 
-        db.execSQL("INSERT INTO " + TABLE_EXERCISES + " VALUES (6, 'TricepsDips', "+R.drawable.triceps_dips+", '1. You can do it from a chair or a bench, "+
+        db.execSQL("INSERT INTO " + TABLE_EXERCISES + " VALUES (6, 'TricepsDips', "+getDrawableResourceId("triceps_dips")+", '1. You can do it from a chair or a bench, "+
                 "you can even do it on the floor. "+
                 "\n" +
                 "2. So just getting yourself into position to start by rolling your shoulders down. "+
@@ -96,7 +101,7 @@ public class DataBaseHelper extends SQLiteOpenHelper {
                 "5. Youre gonna bend the elbows, lowering the hips down, and then exhale to extend the elbows and lift your body up. "+
                 "Inhale down, exhale up.')");
 
-        db.execSQL("INSERT INTO " + TABLE_EXERCISES + " VALUES (7, 'InclinePushUp', "+R.drawable.incline_pushup+", '1. Place your hands on the edge of the elevated surface. " +
+        db.execSQL("INSERT INTO " + TABLE_EXERCISES + " VALUES (7, 'InclinePushUp', "+getDrawableResourceId("incline_pushup")+", '1. Place your hands on the edge of the elevated surface. " +
                 "\n" +
                 "2. Step your feet back so your legs are straight and your arms are perpendicular to your body. "+
                 "\n" +
@@ -106,13 +111,13 @@ public class DataBaseHelper extends SQLiteOpenHelper {
                 "\n" +
                 "5. Exhale as you push back to your starting position with your arms fully extended.')");
 
-        db.execSQL("INSERT INTO " + TABLE_EXERCISES + " VALUES (8, 'JumpingSquat', "+R.drawable.jumping_squat+", 'Stand tall with your feet hip-width apart. "+
+        db.execSQL("INSERT INTO " + TABLE_EXERCISES + " VALUES (8, 'JumpingSquat', "+getDrawableResourceId("jumping_squat")+", 'Stand tall with your feet hip-width apart. "+
                 "\n" +
                 "Hinge at the hips to push your butt back and lower down until your thighs are parallel to the floor. "+
                 "\n" +
                 "Allow your knees to bend 45 degrees when you land, and then immediately drop back down into a squat, and jump again.')");
 
-        db.execSQL("INSERT INTO " + TABLE_EXERCISES + " VALUES (9, 'HammerCurls', "+R.drawable.hammer_curls+", 'Step 1 "+
+        db.execSQL("INSERT INTO " + TABLE_EXERCISES + " VALUES (9, 'HammerCurls', "+getDrawableResourceId("hammer_curls")+", 'Step 1 "+
                 "Stand up straight with a dumbbell in each hand, holding them alongside you. Your palms should face your body. Keep your feet hip-width apart and engage your core to stabilize the body. "+
                 "\n" +
                 "Step 2 "+
@@ -121,13 +126,13 @@ public class DataBaseHelper extends SQLiteOpenHelper {
                 "Step 3 " +
                 "Lift until the dumbbells reach shoulder-level, but don’t actually touch your shoulders. Hold this contraction briefly, then lower back to the starting position and repeat.')");
 
-        db.execSQL("INSERT INTO " + TABLE_EXERCISES + " VALUES (10, 'ShoulderPress', "+R.drawable.shoulder_press+", 'Stand with feet shoulder-width apart and hold the dumbbells at shoulder height with your elbows at a 90-degree angle. "+
+        db.execSQL("INSERT INTO " + TABLE_EXERCISES + " VALUES (10, 'ShoulderPress', "+getDrawableResourceId("shoulder_press")+", 'Stand with feet shoulder-width apart and hold the dumbbells at shoulder height with your elbows at a 90-degree angle. "+
                 "\n" +
                 "Slowly lift the dumbbells above your head without fully straightening your arms. Pause at the top. "+
                 "\n" +
                 "Slowly return to the start position.')");
 
-        db.execSQL("INSERT INTO " + TABLE_EXERCISES + " VALUES (11, 'Swimming', "+R.drawable.swimming+", '1. Float with your face in the water, your body straight and horizontal. Stack your hands and keep your arms and legs long. " +
+        db.execSQL("INSERT INTO " + TABLE_EXERCISES + " VALUES (11, 'Swimming', "+getDrawableResourceId("swimming")+", '1. Float with your face in the water, your body straight and horizontal. Stack your hands and keep your arms and legs long. " +
                 "Point your thumbs down. " +
                 "\n" +
                 "2. Press your hands out and back in a circle, elbows high. Lift your head slightly and inhale. " +
@@ -139,11 +144,11 @@ public class DataBaseHelper extends SQLiteOpenHelper {
                 "5. Glide forward and repeat.')");
 
         // adding songs
-        db.execSQL("INSERT INTO " + TABLE_SONGS + " VALUES (1, 'speedrun', "+R.raw.speedrun+")");
-        db.execSQL("INSERT INTO " + TABLE_SONGS + " VALUES (2, 'speedrun2', "+R.raw.speedrun2+")");
-        db.execSQL("INSERT INTO " + TABLE_SONGS + " VALUES (3, 'speedrun3', "+R.raw.speedrun3+")");
-        db.execSQL("INSERT INTO " + TABLE_SONGS + " VALUES (4, 'phantom', "+R.raw.phantom+")");
-        db.execSQL("INSERT INTO " + TABLE_SONGS + " VALUES (5, 'shoping', "+R.raw.shoping+")");
+        db.execSQL("INSERT INTO " + TABLE_SONGS + " VALUES (1, 'speedrun', "+getRawResourceId("speedrun")+")");
+        db.execSQL("INSERT INTO " + TABLE_SONGS + " VALUES (2, 'speedrun2', "+getRawResourceId("speedrun2")+")");
+        db.execSQL("INSERT INTO " + TABLE_SONGS + " VALUES (3, 'speedrun3', "+getRawResourceId("speedrun3")+")");
+        db.execSQL("INSERT INTO " + TABLE_SONGS + " VALUES (4, 'phantom', "+getRawResourceId("phantom")+")");
+        db.execSQL("INSERT INTO " + TABLE_SONGS + " VALUES (5, 'shoping', "+getRawResourceId("shoping")+")");
 
 
 
@@ -161,23 +166,42 @@ public class DataBaseHelper extends SQLiteOpenHelper {
         // exerciseID INTEGER, date TEXT, time INTEGER, rating INTEGER, repetition INTEGER)
 
 
-        db.execSQL("INSERT INTO " + TABLE_USEREXERCISES + " VALUES(1, 'alon', 1, 'MAR 7 2021', 100, 1, 100)");
-        db.execSQL("INSERT INTO " + TABLE_USEREXERCISES + " VALUES(2, 'alon', 2, 'JAN 8 2021', 10, 2, 10)");
-        db.execSQL("INSERT INTO " + TABLE_USEREXERCISES + " VALUES(3, 'alon', 3, 'FEB 9 2021', 60, 3, 60)");
-        db.execSQL("INSERT INTO " + TABLE_USEREXERCISES + " VALUES(4, 'alon', 4, 'APR 10 2020', 30, 4, 30)");
-        db.execSQL("INSERT INTO " + TABLE_USEREXERCISES + " VALUES(5, 'alon', 5, 'JUN 11 2020', 50, 5, 50)");
-        db.execSQL("INSERT INTO " + TABLE_USEREXERCISES + " VALUES(6, 'alon', 6, 'SEP 25 2020', 100, 1, 100)");
-        db.execSQL("INSERT INTO " + TABLE_USEREXERCISES + " VALUES(7, 'alon', 7, 'MAR 7 2021', 20, 2, 20)");
-        db.execSQL("INSERT INTO " + TABLE_USEREXERCISES + " VALUES(8, 'alon', 8, 'JAN 8 2021', 56, 3, 56)");
-        db.execSQL("INSERT INTO " + TABLE_USEREXERCISES + " VALUES(9, 'alon', 9, 'FEB 9 2021', 34, 4, 34)");
-        db.execSQL("INSERT INTO " + TABLE_USEREXERCISES + " VALUES(10, 'alon', 10, 'APR 10 2020', 70, 5, 70)");
-        db.execSQL("INSERT INTO " + TABLE_USEREXERCISES + " VALUES(11, 'alon', 11, 'MAR 11 2021', 120, 1, 110)");
+        db.execSQL("INSERT INTO " + TABLE_USEREXERCISES + " VALUES(1, 'alon', 1, 'JAN 7 2021', 100, 1, 100)");
+        db.execSQL("INSERT INTO " + TABLE_USEREXERCISES + " VALUES(2, 'alon', 1, 'DEC 7 2021', 100, 1, 100)");
+        db.execSQL("INSERT INTO " + TABLE_USEREXERCISES + " VALUES(3, 'alon', 2, 'JAN 8 2021', 10, 2, 10)");
+        db.execSQL("INSERT INTO " + TABLE_USEREXERCISES + " VALUES(4, 'alon', 3, 'FEB 9 2021', 60, 3, 60)");
+        db.execSQL("INSERT INTO " + TABLE_USEREXERCISES + " VALUES(5, 'alon', 4, 'APR 10 2020', 30, 4, 30)");
+        db.execSQL("INSERT INTO " + TABLE_USEREXERCISES + " VALUES(6, 'alon', 5, 'JUN 11 2020', 50, 5, 50)");
+        db.execSQL("INSERT INTO " + TABLE_USEREXERCISES + " VALUES(7, 'alon', 6, 'SEP 25 2020', 100, 1, 100)");
+        db.execSQL("INSERT INTO " + TABLE_USEREXERCISES + " VALUES(8, 'alon', 7, 'MAR 7 2021', 20, 2, 20)");
+        db.execSQL("INSERT INTO " + TABLE_USEREXERCISES + " VALUES(9, 'alon', 8, 'JAN 8 2021', 56, 3, 56)");
+        db.execSQL("INSERT INTO " + TABLE_USEREXERCISES + " VALUES(10, 'alon', 9, 'FEB 9 2021', 34, 4, 34)");
+        db.execSQL("INSERT INTO " + TABLE_USEREXERCISES + " VALUES(11, 'alon', 10, 'APR 10 2020', 70, 5, 70)");
+        db.execSQL("INSERT INTO " + TABLE_USEREXERCISES + " VALUES(12, 'alon', 11, 'MAR 11 2021', 120, 1, 110)");
 
 
 
 
 
 
+    }
+
+    // Method to get the drawable resource ID using the Context
+    public int getDrawableResourceId(String fileName) {
+        if (mContext != null) {
+            return mContext.getResources().getIdentifier(fileName, "drawable", mContext.getPackageName());
+        } else {
+            return 0; // Return 0 or handle null context case accordingly
+        }
+    }
+
+    // Method to get the raw resource ID using the Context
+    public int getRawResourceId(String fileName) {
+        if (mContext != null) {
+            return mContext.getResources().getIdentifier(fileName, "raw", mContext.getPackageName());
+        } else {
+            return 0; // Return 0 or handle null context case accordingly
+        }
     }
 
     //Delete database
