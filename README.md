@@ -1,4 +1,4 @@
-# FitShare: Exercise Tracking and Social Sharing App
+# FitNote: Exercise Tracking and Social Sharing App
 
 FitShare is an Android application designed to help users track their exercise routines and share fitness progress with friends in a social setting.
 
@@ -6,9 +6,8 @@ FitShare is an Android application designed to help users track their exercise r
 
 - **Exercise Tracking**: Record various workout activities such as running, walking, cycling, weightlifting, and more.
 - **Data Visualization**: View detailed statistics and visual representations of workout progress over time.
-- **Social Sharing**: Share workout achievements, progress milestones, and challenges with friends and followers.
-- **Friend Interactions**: Connect with friends, comment on each other's activities, and provide encouragement.
-- **Leaderboards**: Compete and compare workout achievements on leaderboards within your social circle.
+- **Social Sharing**: Share workout achievements, progress milestones, and challenges with friends and followers via whatsapp.
+- **Friend Interactions**: With those messages to freinds, connect and comment on each other's activities, and provide encouragement. Compete and compare workout achievements with others.
 
 ## Screenshots
 
