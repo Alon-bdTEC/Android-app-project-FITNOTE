@@ -11,7 +11,7 @@ FitShare is an Android application designed to help users track their exercise r
 
 ## Screenshots
 
-![FitShare App Screenshots](image/screenshots.png)
+![FitShare App Screenshots](FitNote_Logo.png)
 
 ## Installation
 
