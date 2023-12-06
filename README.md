@@ -21,15 +21,15 @@ App Logo in the Android phone (samsung)
 
 First Screen
 
-![FirstScreen](FirstScreen.jpeg)
+![FirstScreen](Images/FirstScreen.jpeg)
 
 Main Screen
 
-![Main_Screen](Main_Screen.jpeg)
+![Main_Screen](Images/Main_Screen.jpeg)
 
 Diagram Of Screens
 
-![Diagram_Of_Screens](Diagram_Of_Screens.JPG)
+![Diagram_Of_Screens](Images/Diagram_Of_Screens.JPG)
 
 ## Installation
 
