@@ -1,6 +1,6 @@
 # FitNote: Exercise Tracking and Social Sharing App
 
-FitShare is an Android application designed to help users track their exercise routines and share fitness progress with friends in a social setting.
+FitNote is an Android application designed to help users track their exercise routines and share fitness progress with friends in a social setting.
 
 ## Features
 
@@ -11,7 +11,25 @@ FitShare is an Android application designed to help users track their exercise r
 
 ## Screenshots
 
-![FitShare App Screenshots](FitNote_Logo.png)
+App logo
+
+![FitNote_Logo](Images/FitNote_Logo.png)
+
+App Logo in the Android phone (samsung)
+
+![AppLogo_In_AndroidPhon](Images/AppLogo_In_AndroidPhon.jpeg)
+
+First Screen
+
+![FirstScreen](FirstScreen.jpeg)
+
+Main Screen
+
+![Main_Screen](Main_Screen.jpeg)
+
+Diagram Of Screens
+
+![Diagram_Of_Screens](Diagram_Of_Screens.JPG)
 
 ## Installation
 
@@ -38,10 +56,6 @@ FitShare is an Android application designed to help users track their exercise r
 
 We welcome contributions from the community! If you'd like to contribute to FitShare, feel free to fork the repository, make your changes, and submit a pull request.
 
-## Support
+## Contributors:
 
-For any issues, bugs, or feature requests, please open an issue on GitHub.
-
-## License
-
-This project is licensed under the MIT License - see the [LICENSE](LICENSE) file for details.
+This project was developed and contributed to by Alon Omer Ben David.
